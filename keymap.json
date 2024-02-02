@@ -1,14 +1,5 @@
 [
   {
-    "context": "Terminal",
-    "bindings": {
-      "cmd-n": "workspace::NewTerminal",
-      "cmd-d": "pane::CloseActiveItem",
-      "cmd-t": "workspace::ToggleBottomDock",
-      "cmd-shift-f": "workspace::ToggleZoom"
-    }
-  },
-  {
     "context": "Workspace",
     "bindings": {
       "cmd-shift-e": "workspace::ToggleLeftDock",
@@ -19,12 +10,50 @@
     "context": "Editor",
     "bindings": {
       "ctrl-cmd-k": "editor::MoveLineUp",
-      "ctrl-cmd-j": "editor::MoveLineDown"
+      "ctrl-cmd-j": "editor::MoveLineDown",
+      "cmd-shift-a": "assistant::QuoteSelection"
     }
   },
   {
     "bindings": {
       "cmd-shift-c": "workspace::CloseInactiveTabsAndPanes"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal && vim_operator == none && !VimWaiting",
+    "bindings": {
+      "space f f": "file_finder::Toggle",
+      "space f w": "pane::DeploySearch",
+      "space e": "workspace::ToggleLeftDock",
+      "space t": "workspace::ToggleBottomDock",
+      "space /": [
+        "editor::ToggleComments",
+        {
+          "advance_downwards": false
+        }
+      ]
+    }
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "escape": "workspace::ToggleLeftDock"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "cmd-n": "workspace::NewTerminal",
+      "cmd-d": "pane::CloseActiveItem",
+      "cmd-t": "workspace::ToggleBottomDock",
+      "cmd-shift-f": "workspace::ToggleZoom",
+      "escape": "workspace::ToggleBottomDock"
+    }
+  },
+  {
+    "context": "ProjectSearchBar",
+    "bindings": {
+      "escape": "pane::CloseActiveItem"
     }
   }
 ]
