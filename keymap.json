@@ -1,0 +1,30 @@
+[
+  {
+    "context": "Terminal",
+    "bindings": {
+      "cmd-n": "workspace::NewTerminal",
+      "cmd-d": "pane::CloseActiveItem",
+      "cmd-t": "workspace::ToggleBottomDock",
+      "cmd-shift-f": "workspace::ToggleZoom"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-shift-e": "workspace::ToggleLeftDock",
+      "cmd-t": "workspace::ToggleBottomDock"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-cmd-k": "editor::MoveLineUp",
+      "ctrl-cmd-j": "editor::MoveLineDown"
+    }
+  },
+  {
+    "bindings": {
+      "cmd-shift-c": "workspace::CloseInactiveTabsAndPanes"
+    }
+  }
+]
